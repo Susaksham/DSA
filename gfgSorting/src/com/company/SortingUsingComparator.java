@@ -8,6 +8,13 @@ public class SortingUsingComparator {
         for(int i = 0 ; i < arr.length ;i++){
             map.put(arr[i] , map.getOrDefault(arr[i] , 0) + 1);
         }
+        int[][] aarr = {{1 ,2 } , {3 , 4 } , {4 ,9}};
+        Arrays.sort(aarr, new Comparator<int[]>() {
+            @Override
+            public int compare(int[] o1, int[] o2) {
+                return 0;
+            }
+        });
         ArrayList<ArrayList<Integer>> list = new ArrayList<>();
         for(Map.Entry <Integer , Integer> e : map.entrySet()){
             list.add(new ArrayList<Integer>());
